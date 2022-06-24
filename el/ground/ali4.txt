@@ -1,0 +1,6 @@
+Solver: Newton Concrete (LDU)
+Iterations: 3
+Solving time:	0 ms (86us)
+target == {{null33_1_7818}}
+null15_2_7818 == {{null33_1_7818}}
+

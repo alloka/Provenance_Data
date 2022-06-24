@@ -1,0 +1,4 @@
+q04_p(?prescription_id,?targethospital_spec,!provH0) :- r_04(?prescription_id,?targethospital_spec,?prov0,?prov1,?prov2).
+r04(?prov0,?prov1,!andN0,?prov2,!andN1,?provH0) :- r_04(?prescription_id,?targethospital_spec,?prov0,?prov1,?prov2), q04_p(?prescription_id,?targethospital_spec,?provH0), iterate(?provH0).
+rig_edge1(?prov0,?andN0),rig_edge2(?prov1,?andN0),rig_edge1(?andN0,?andN1),rig_edge2(?prov2,?andN1),idb_edge(?andN1,?provH0) :- r04(?prov0,?prov1,?andN0,?prov2,?andN1,?provH0).
+r_04(?prescription_id,?targethospital_spec,?prov0,?prov1,?prov2) :- prescription_p(?prescription_id,?prescription_patient,?prescription_npi,?prescription_conf,?prov0), targethospital_p(?targethospital_doctor,?targethospital_spec,?targethospital_hospital,?prescription_npi,?targethospital_conf,?prov1), doctor_p(?doctor_npi,?doctor_doctor,?targethospital_spec,?doctor_hospital,?doctor_conf,?prov2). 

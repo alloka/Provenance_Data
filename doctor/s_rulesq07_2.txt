@@ -1,0 +1,21 @@
+prescription_p(?id,?patient,?npi,a,!provH0) :-  treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1).
+r0(?prov0,?prov1,!andN0,?provH0), iterate(?prov0), iterate(?prov1) :- treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1), prescription_p(?id,?patient,?npi,a,?provH0), iterate(?provH0).
+rig_edge1(?prov0,?andN0),rig_edge2(?prov1,?andN0),idb_edge(?andN0,?provH0) :- r0(?prov0,?prov1,?andN0,?provH0).
+doctor_p(?npi,?name,?spec,?hospital,b,!provH0) :- treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1).
+r0(?prov0,?prov1,!andN0,?provH0), iterate(?prov0), iterate(?prov1):- treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1), doctor_p(?npi,?name,?spec,?hospital,b,?provH0), iterate(?provH0).
+prescription_p(?id,?patient,?npi,c,!provH0) :- medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+r2(?prov0,!andN,?provH0), iterate(?prov0) :- prescription_p(?id,?patient,?npi,c,?provH0), medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0), iterate(?provH0).
+rig_edge1(?prov0,?andN),rig_edge2(?prov0,?andN),idb_edge(?andN,?provH0) :- r2(?prov0,?andN,?provH0).
+doctor_p(?npi,?doctor,?spec,e,d,!provH0) :- medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+r2(?prov0,!andN,?provH0), iterate(?prov0) :- medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0), doctor_p(?npi,?doctor,?spec,e,d,?provH0), iterate(?provH0).
+targethospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,!provH0) :- hospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,?prov0).
+r2(?prov0,!andN,?provH0), iterate(?prov0):- targethospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,?provH0), hospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,?prov0), iterate(?provH0).
+q07_p(?doctor_doctor,?prescription_npi,!provH0) :- targethospital_p(?doctor_doctor,?targethospital_spec,?targethospital_hospital,?targethospital_npi,?targethospital_conf,?prov0), prescription_p(?prescription_id,?prescription_patient,?prescription_npi,?prescription_conf,?prov1), doctor_p(?prescription_npi,?doctor_doctor,?doctor_spec,?doctor_hospital,?doctor_conf,?prov2).
+r5(?prov0,?prov1,!andN0,?prov2,!andN1,?provH0), iterate(?prov0), iterate(?prov1), iterate(?prov2) :- targethospital_p(?doctor_doctor,?targethospital_spec,?targethospital_hospital,?targethospital_npi,?targethospital_conf,?prov0), q07_p(?doctor_doctor,?prescription_npi,?provH0),  prescription_p(?prescription_id,?prescription_patient,?prescription_npi,?prescription_conf,?prov1), doctor_p(?prescription_npi,?doctor_doctor,?doctor_spec,?doctor_hospital,?doctor_conf,?prov2), iterate(?provH0).
+rig_edge1(?prov0,?andN0),rig_edge2(?prov1,?andN0),rig_edge1(?andN0,?andN1),rig_edge2(?prov2,?andN1),idb_edge(?andN1,?provH0) :- r5(?prov0,?prov1,?andN0,?prov2,?andN1,?provH0).
+edb(!prov), medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,!prov) :- medprescription(?id,?patient,?npi,?doctor,?spec,?conf).
+edb(!prov), hospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,!prov) :- hospital(?doctor,?spec,?hospital1,?npi1,?hconf1).
+edb(!prov), physician_p(?npi,?name,?spec,?conf2,!prov) :- physician(?npi,?name,?spec,?conf2).
+edb(!prov), treatment_p(?id,?patient,?hospital,?npi,?conf1,!prov) :- treatment(?id,?patient,?hospital,?npi,?conf1).
+
+

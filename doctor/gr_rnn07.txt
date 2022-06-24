@@ -1,0 +1,16 @@
+prescription_p(?id,?patient,?npi,a,!provH0) :- r_0(?id,?patient,?hospital,?npi,?conf1,?name,?spec,?conf2,?prov0,?prov1).
+r_0(?id,?patient,?hospital,?npi,?conf1,?name,?spec,?conf2,?prov0,?prov1) :- treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1).
+doctor_p(?npi,?name,?spec,?hospital,b,!provH0) :- r_1(?id,?patient,?hospital,?npi,?conf1,?name,?spec,?conf2,?prov0,?prov1).
+r_1(?id,?patient,?hospital,?npi,?conf1,?name,?spec,?conf2,?prov0,?prov1) :- treatment_p(?id,?patient,?hospital,?npi,?conf1,?prov0), physician_p(?npi,?name,?spec,?conf2,?prov1).
+prescription_p(?id,?patient,?npi,c,!provH0) :- r_2(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+r_2(?id,?patient,?npi,?doctor,?spec,?conf,?prov0) :- medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+doctor_p(?npi,?doctor,?spec,e,d,!provH0) :- r_3(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+r_3(?id,?patient,?npi,?doctor,?spec,?conf,?prov0) :- medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,?prov0).
+targethospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,!provH0) :- r_4(?doctor,?spec,?hospital1,?npi1,?hconf1,?prov0).
+r_4(?doctor,?spec,?hospital1,?npi1,?hconf1,?prov0) :- hospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,?prov0).
+q07_p(?doctor_doctor,?prescription_npi,!provH0) :- r_5(?doctor_doctor,?prescription_npi,?prescription_id,?prescription_patient,?prescription_conf,?doctor_spec,?doctor_hospital,?doctor_conf,?targethospital_spec,?targethospital_hospital,?targethospital_npi,?targethospital_conf,?prov0,?prov1,?prov2).
+r_5(?doctor_doctor,?prescription_npi,?prescription_id,?prescription_patient,?prescription_conf,?doctor_spec,?doctor_hospital,?doctor_conf,?targethospital_spec,?targethospital_hospital,?targethospital_npi,?targethospital_conf,?prov0,?prov1,?prov2) :- prescription_p(?prescription_id,?prescription_patient,?prescription_npi,?prescription_conf,?prov0), doctor_p(?prescription_npi,?doctor_doctor,?doctor_spec,?doctor_hospital,?doctor_conf,?prov1), targethospital_p(?doctor_doctor,?targethospital_spec,?targethospital_hospital,?targethospital_npi,?targethospital_conf,?prov2).
+edb(!prov), medprescription_p(?id,?patient,?npi,?doctor,?spec,?conf,!prov) :- medprescription(?id,?patient,?npi,?doctor,?spec,?conf).
+edb(!prov), hospital_p(?doctor,?spec,?hospital1,?npi1,?hconf1,!prov) :- hospital(?doctor,?spec,?hospital1,?npi1,?hconf1).
+edb(!prov), physician_p(?npi,?name,?spec,?conf2,!prov) :- physician(?npi,?name,?spec,?conf2).
+edb(!prov), treatment_p(?id,?patient,?hospital,?npi,?conf1,!prov) :- treatment(?id,?patient,?hospital,?npi,?conf1).

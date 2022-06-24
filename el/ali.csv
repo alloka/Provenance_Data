@@ -1,0 +1,50 @@
+rule,time,number of applications
+"HEAD= r_0-2[1]ff(?1,?2) BODY= http://rulewerk.semantic-web.org/normalForm/isMainClass_p-2[1]ff(?1,?2) ",5.3E-5sec,1
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/subPropChain_p-4[1]ffff(?2,?3,?4,?1) BODY= http://rulewerk.semantic-web.org/normalForm/subPropChain-3[0]fff(?2,?3,?4) ",6.73E-5sec,1
+"HEAD= r11-4[1]ffff(?1,?2,?3,?4) BODY= r_11-4[1]fbff(?5,owl:Nothing,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fbf(?5,owl:Nothing,?4) iterate-1[1]f(?4) ",9.93E-5sec,1
+"HEAD= r6-6[1]ffffff(?1,?2,?3,?4,?5,?6) BODY= r_6-6[1]ffffff(?7,?8,?9,?1,?3,?5) aux_subsubExt_p-4[1]ffff(?7,?8,?9,?6) iterate-1[1]f(?6) ",1.6560000000000001E-4sec,2
+"HEAD= r_2-4[1]fbff(?1,owl:Thing,?2,?3) BODY= http://rulewerk.semantic-web.org/normalForm/isMainClass_p-2[1]ff(?1,?2) http://rulewerk.semantic-web.org/normalForm/isSubClass_p-2[1]bf(owl:Thing,?3) ",9.906000000000001E-4sec,1
+"HEAD= r0-3[1]fff(?1,?2,?3) BODY= r_0-2[1]ff(?4,?2) http://rulewerk.semantic-web.org/inferred/init_p-2[1]ff(?4,?3) iterate-1[1]f(?3) ",0.0015801000000000003sec,18
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/subProp_p-3[1]fff(?2,?3,?1) BODY= http://rulewerk.semantic-web.org/normalForm/subProp-2[0]ff(?2,?3) ",0.002783sec,1
+"HEAD= http://rulewerk.semantic-web.org/inferred/init_p-2[1]ff(?1,?2) BODY= r_0-2[1]ff(?1,?3) ",0.0028171sec,1
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/isMainClass_p-2[1]ff(?2,?1) BODY= http://rulewerk.semantic-web.org/normalForm/isMainClass-1[0]f(?2) ",0.0055513sec,1
+"HEAD= r_1-2[1]ff(?1,?2) BODY= http://rulewerk.semantic-web.org/inferred/init_p-2[1]ff(?1,?2) ",0.0078435sec,18
+"HEAD= r13-6[1]ffffff(?1,?2,?3,?4,?5,?6) BODY= r_13-5[1]fffff(?7,?8,?1,?3,?5) mainSubClassOf_p-3[1]fff(?7,?8,?6) iterate-1[1]f(?6) ",0.0080609sec,77
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/exists_p-4[1]ffff(?2,?3,?4,?1) BODY= http://rulewerk.semantic-web.org/normalForm/exists-3[0]fff(?2,?3,?4) ",0.0081864sec,1
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/conj_p-4[1]ffff(?2,?3,?4,?1) BODY= http://rulewerk.semantic-web.org/normalForm/conj-3[0]fff(?2,?3,?4) ",0.0082408sec,1
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/isSubClass_p-2[1]ff(?2,?1) BODY= http://rulewerk.semantic-web.org/normalForm/isSubClass-1[0]f(?2) ",0.0084501sec,1
+"HEAD= r10-10[1]ffffffffff(?1,?2,?3,?4,?5,?6,?7,?8,?9,?10) BODY= r_10-8[1]ffffffff(?11,?12,?13,?1,?3,?5,?7,?9) http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?11,?12,?13,?10) iterate-1[1]f(?10) ",0.011583699999999999sec,137
+"HEAD= aux_subsubExt_p-4[1]ffff(?1,?2,?3,?4) BODY= r_6-6[1]ffffff(?1,?2,?3,?5,?6,?7) ",0.0136013sec,1
+"HEAD= r12-3[1]fff(?1,?2,?3) BODY= r_12-2[1]ff(?4,?2) http://rulewerk.semantic-web.org/inferred/init_p-2[1]ff(?4,?3) iterate-1[1]f(?3) ",0.014276300000000007sec,155
+"HEAD= r5-4[1]ffff(?1,?2,?3,?4) BODY= r_5-5[1]fffff(?5,?6,?7,?1,?3) http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?5,?6,?7,?4) iterate-1[1]f(?4) ",0.014957600000000001sec,137
+"HEAD= r8-4[1]ffff(?1,?2,?3,?4) BODY= r_8-4[1]ffff(?5,?6,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?5,?6,?4) iterate-1[1]f(?4) ",0.022293500000000004sec,206
+"HEAD= r_10-8[1]ffffffff(?1,?2,?3,?4,?5,?6,?7,?8) BODY= http://rulewerk.semantic-web.org/inferred/xe_p-4[1]fbff(?9,R1,?3,?4) http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?1,?10,?9,?5) http://rulewerk.semantic-web.org/normalForm/subProp_p-3[1]fff(?11,?12,?6) http://rulewerk.semantic-web.org/normalForm/subProp_p-3[1]fff(?10,?13,?7) http://rulewerk.semantic-web.org/normalForm/subPropChain_p-4[1]ffff(?12,?13,?2,?8) ",0.023183899999999997sec,138
+"HEAD= edb-1[1]f(?1) http://rulewerk.semantic-web.org/normalForm/subClassOf_p-3[1]fff(?2,?3,?1) BODY= http://rulewerk.semantic-web.org/normalForm/subClassOf-2[0]ff(?2,?3) ",0.023331499999999998sec,1
+"HEAD= r7-4[1]ffff(?1,?2,?3,?4) BODY= r_7-5[1]fffff(?5,?6,?7,?1,?3) aux_p-4[1]ffff(?5,?6,?7,?4) iterate-1[1]f(?4) ",0.030561sec,290
+"HEAD= r_6-6[1]ffffff(?1,?2,?3,?4,?5,?6) BODY= http://rulewerk.semantic-web.org/normalForm/subProp_p-3[1]fff(?2,?7,?4) http://rulewerk.semantic-web.org/normalForm/exists_p-4[1]ffff(?3,?7,?1,?5) http://rulewerk.semantic-web.org/normalForm/isSubClass_p-2[1]ff(?3,?6) ",0.0324374sec,1
+"HEAD= r2-4[1]ffff(?1,?2,?3,?4) BODY= r_2-4[1]fbff(?5,owl:Thing,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fbf(?5,owl:Thing,?4) iterate-1[1]f(?4) ",0.03557960000000002sec,453
+"HEAD= r1-3[1]fff(?1,?2,?3) BODY= r_1-2[1]ff(?4,?2) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?4,?4,?3) iterate-1[1]f(?3) ",0.040052399999999995sec,436
+"HEAD= r4-8[1]ffffffff(?1,?2,?3,?4,?5,?6,?7,?8) BODY= r_4-6[1]ffffff(?9,?10,?1,?3,?5,?7) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?9,?10,?8) iterate-1[1]f(?8) ",0.043522700000000025sec,436
+"HEAD= r9-4[1]ffff(?1,?2,?3,?4) BODY= r_9-4[1]ffff(?5,?6,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?5,?6,?4) iterate-1[1]f(?4) ",0.049937300000000004sec,453
+"HEAD= r3-5[1]fffff(?1,?2,?3,?4,?5) BODY= r_3-5[1]fffff(?6,?7,?8,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?6,?7,?4) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?6,?8,?5) iterate-1[1]f(?5) ",0.06828229999999999sec,436
+"HEAD= r3-5[1]fffff(?1,?2,?3,?4,?5) BODY= r_3-5[1]fffff(?6,?7,?8,?1,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?6,?7,?4) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?6,?8,?5) iterate-1[1]f(?4) ",0.07050070000000008sec,436
+"HEAD= http://rulewerk.semantic-web.org/inferred/init_p-2[1]ff(?1,?2) BODY= r_12-2[1]ff(?1,?3) ",0.0891084000000001sec,137
+"HEAD= r_12-2[1]ff(?1,?2) BODY= http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?1,?3,?4,?2) ",0.3946654sec,137
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?1,?2) BODY= r_1-2[1]ff(?1,?3) ",0.4279604sec,18
+"HEAD= r_5-5[1]fffff(?1,?2,?3,?4,?5) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?3,?6,?4) http://rulewerk.semantic-web.org/normalForm/exists_p-4[1]ffff(?6,?2,?1,?5) ",1.1063249000000002sec,454
+"HEAD= r_11-4[1]fbff(?1,owl:Nothing,?2,?3) BODY= http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?4,?5,?1,?2) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fbf(?4,owl:Nothing,?3) ",1.1196348000000007sec,590
+"HEAD= http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?1,?2,?3,?4) BODY= r_5-5[1]fffff(?1,?2,?3,?5,?6) ",1.2417399999999998sec,137
+"HEAD= mainSubClassOf_p-3[1]fff(?1,?2,?3) BODY= r_13-5[1]fffff(?1,?2,?4,?5,?6) ",1.3578365000000006sec,77
+"HEAD= r_3-5[1]fffff(?1,?2,?3,?4,?5) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?6,?4) http://rulewerk.semantic-web.org/normalForm/conj_p-4[1]ffff(?6,?2,?3,?5) ",1.3955133999999998sec,454
+"HEAD= r_13-5[1]fffff(?1,?2,?3,?4,?5) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) http://rulewerk.semantic-web.org/normalForm/isMainClass_p-2[1]ff(?1,?4) http://rulewerk.semantic-web.org/normalForm/isMainClass_p-2[1]ff(?2,?5) ",1.7626641999999986sec,454
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) BODY= r_8-4[1]ffff(?1,?2,?4,?5) ",2.4762276sec,8
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) BODY= r_3-5[1]fffff(?1,?4,?2,?5,?6) ",2.5655520000000003sec,23
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) BODY= r_3-5[1]fffff(?1,?2,?4,?5,?6) ",4.1655527sec,145
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) BODY= r_4-6[1]ffffff(?1,?2,?4,?5,?6,?7) ",4.682404500000002sec,185
+"HEAD= r_9-4[1]ffff(?1,?2,?3,?4) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?5,?3) http://rulewerk.semantic-web.org/normalForm/subClassOf_p-3[1]fff(?5,?2,?4) ",8.808251000000004sec,454
+"HEAD= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?2,?3) BODY= r_9-4[1]ffff(?1,?2,?4,?5) ",10.199077700000002sec,185
+"HEAD= r_4-6[1]ffffff(?1,?2,?3,?4,?5,?6) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?7,?3) http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?8,?4) http://rulewerk.semantic-web.org/normalForm/conj_p-4[1]ffff(?2,?7,?8,?5) http://rulewerk.semantic-web.org/normalForm/isSubClass_p-2[1]ff(?2,?6) ",11.170874699999993sec,454
+"HEAD= r_8-4[1]ffff(?1,?2,?3,?4) BODY= http://rulewerk.semantic-web.org/inferred/xe_p-4[1]ffff(?5,?6,?1,?3) aux_p-4[1]ffff(?5,?6,?2,?4) ",40.87633340000002sec,432
+"HEAD= r_7-5[1]fffff(?1,?2,?3,?4,?5) BODY= http://rulewerk.semantic-web.org/inferred/subClassOf_p-3[1]fff(?1,?6,?4) aux_subsubExt_p-4[1]ffff(?6,?2,?3,?5) ",104.70787240000004sec,454
+"HEAD= aux_p-4[1]ffff(?1,?2,?3,?4) BODY= r_7-5[1]fffff(?1,?2,?3,?5,?6) ",231.03512589999988sec,295
+Total time is 430.13171010000025 sec

@@ -1,0 +1,2 @@
+Solver: Newton Concrete (LDU)
+Iterations: 76
