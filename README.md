@@ -8,5 +8,5 @@ Computing Why-Provenance On-Demand for Datalog" paper the 2022 RuleML + RR submi
   title as this document. It contains a holistic example of all the notions. We explain
   in detail how the different stages of our approach look like for the particular
   example given in the paper.
-  * **EL and Doctor** -> the dataset, rules and rewritings used for the experimental results in our submission.
+  * **EL and Doctor** -> the datasets, rules and rewritings used for the experimental results in our submission.
   * **Why-Provenance results.ods** -> contains all the results for all the runs of each experiment in the paper.
